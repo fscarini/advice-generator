@@ -1,0 +1,88 @@
+.container{
+    height: 100vh;
+    background: var(--bg-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    max-width: 560px;
+    padding: 4rem;
+    border-radius: 12px;
+    background: var(--card-color);
+}
+
+.card > .advice-number{
+    font-size: 1.8rem;
+    color: var(--secondary-color);
+    text-transform: uppercase;
+}
+
+.card > .advice{
+    font-size: 2.8rem;
+    color: var(--primary-color);
+    text-align: center;
+    padding: 3rem;
+}
+
+.card > .divider{
+    padding: 1rem 0 2rem 0;
+}
+
+.card > button {
+    position: relative;
+    cursor: pointer;
+}
+
+button > .dice-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 10%);
+    background-color: var(--secondary-color);
+    padding: 2rem;
+    border-radius: 50%;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+button:hover > .dice-container {
+    box-shadow: 0 0 15px var(--secondary-color), 
+                0 0 15px var(--secondary-color), 
+                0 0 15px var(--secondary-color);
+}
+
+.divider-mobile{
+    display: none;
+    padding: 1rem 0 2rem 0;
+    width: 110%;
+    height: auto;
+}
+
+
+@media screen and (max-width: 660px) {
+    .container{
+        padding: 1rem;
+    }
+
+    .card{
+        max-width: 90%;
+    }
+
+    .divider{
+        display: none;
+    }
+
+    .divider-mobile{
+        display: block;
+    }
+
+    .card > .advice-number{
+        width: 100%;
+        text-align: center;
+    }
+}
